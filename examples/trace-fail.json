@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "run_id": "demo_run_unsafe",
+  "environment": "simulation",
+  "source_format": "neutral_json",
+  "events": [
+    {"seq": 0, "t_ns": 0, "kind": "phase_enter", "phase": "approach"},
+    {"seq": 1, "t_ns": 100, "kind": "observation", "phase": "approach"},
+    {"seq": 2, "t_ns": 200, "kind": "phase_exit", "phase": "approach"},
+    {"seq": 3, "t_ns": 300, "kind": "phase_enter", "phase": "mate"},
+    {"seq": 4, "t_ns": 400, "kind": "contact", "phase": "mate", "contact_state": "stable", "force_n": [25, 0, 0], "torque_nm": [0.1, 0.1, 0.1]},
+    {"seq": 5, "t_ns": 500, "kind": "phase_exit", "phase": "mate"}
+  ]
+}

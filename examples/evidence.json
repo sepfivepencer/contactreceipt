@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "items": [
+    {
+      "id": "controller_v1",
+      "kind": "controller_config",
+      "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "applies_to": ["simulation", "hardware"],
+      "source_uri": "urn:sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    {
+      "id": "scene_v1",
+      "kind": "environment_snapshot",
+      "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "applies_to": ["simulation"]
+    },
+    {
+      "id": "replay_v1",
+      "kind": "replay_log",
+      "sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "applies_to": ["simulation", "hardware"]
+    }
+  ]
+}

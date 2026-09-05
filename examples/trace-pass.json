@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "run_id": "demo_run_001",
+  "environment": "simulation",
+  "source_format": "neutral_json",
+  "events": [
+    {"seq": 0, "t_ns": 0, "kind": "phase_enter", "phase": "approach"},
+    {"seq": 1, "t_ns": 100, "kind": "observation", "phase": "approach", "evidence_refs": ["scene_v1"]},
+    {"seq": 2, "t_ns": 200, "kind": "phase_exit", "phase": "approach"},
+    {"seq": 3, "t_ns": 300, "kind": "phase_enter", "phase": "mate"},
+    {"seq": 4, "t_ns": 400, "kind": "action", "phase": "mate", "evidence_refs": ["controller_v1"]},
+    {"seq": 5, "t_ns": 500, "kind": "contact", "phase": "mate", "contact_state": "stable", "force_n": [2, 1, 8], "torque_nm": [0.2, 0.1, 0.4]},
+    {"seq": 6, "t_ns": 600, "kind": "phase_exit", "phase": "mate"},
+    {"seq": 7, "t_ns": 700, "kind": "phase_enter", "phase": "verify"},
+    {"seq": 8, "t_ns": 800, "kind": "checkpoint", "phase": "verify", "evidence_refs": ["replay_v1"]},
+    {"seq": 9, "t_ns": 900, "kind": "phase_exit", "phase": "verify"}
+  ]
+}

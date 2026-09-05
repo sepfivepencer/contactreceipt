@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "assembly_id": "peg_in_hole_demo",
+  "initial_phase": "approach",
+  "terminal_phase": "verify",
+  "phases": [
+    {
+      "name": "approach",
+      "requires": [],
+      "allowed_next": ["mate"],
+      "required_kinds": ["observation"],
+      "max_duration_ns": 1000000000,
+      "envelope": {
+        "force_abs_max_n": [5, 5, 5],
+        "force_norm_max_n": 7,
+        "torque_abs_max_nm": [1, 1, 1],
+        "torque_norm_max_nm": 1.5,
+        "allowed_contact_states": ["none"],
+        "require_wrench_on_contact": false
+      }
+    },
+    {
+      "name": "mate",
+      "requires": ["approach"],
+      "allowed_next": ["verify"],
+      "required_kinds": ["action", "contact"],
+      "max_duration_ns": 2000000000,
+      "envelope": {
+        "force_abs_max_n": [10, 10, 12],
+        "force_norm_max_n": 15,
+        "torque_abs_max_nm": [2, 2, 2],
+        "torque_norm_max_nm": 3,
+        "allowed_contact_states": ["touch", "stable", "lost"],
+        "require_wrench_on_contact": true
+      }
+    },
+    {
+      "name": "verify",
+      "requires": ["approach", "mate"],
+      "allowed_next": [],
+      "required_kinds": ["checkpoint"],
+      "max_duration_ns": 1000000000,
+      "envelope": {
+        "allowed_contact_states": ["none", "stable"],
+        "require_wrench_on_contact": false
+      }
+    }
+  ],
+  "evidence_requirements": [
+    {"kind": "controller_config", "environments": ["simulation", "hardware"], "min_count": 1},
+    {"kind": "environment_snapshot", "environments": ["simulation"], "min_count": 1},
+    {"kind": "replay_log", "environments": ["simulation", "hardware"], "min_count": 1},
+    {"kind": "calibration", "environments": ["hardware"], "min_count": 1},
+    {"kind": "safety_review", "environments": ["hardware"], "min_count": 1}
+  ]
+}
