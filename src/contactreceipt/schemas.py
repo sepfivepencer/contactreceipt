@@ -332,7 +332,7 @@ def _receipt_schema() -> dict[str, Any]:
                     "required": ["name", "version", "algorithm"],
                     "properties": {
                         "name": {"const": "contactreceipt"},
-                        "version": {"const": "0.1.0"},
+                        "version": {"const": "0.1.1"},
                         "algorithm": {"const": "civil-assembly-v1"},
                     },
                 },

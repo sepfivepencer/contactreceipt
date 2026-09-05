@@ -1,6 +1,6 @@
 # JSON 合约、CLI 与违规码参考
 
-本页描述 ContactReceipt `0.1.0` 的公开接口。运行时解析器是 trace、policy 与 evidence 的最终约束；`schema` 子命令只把 Draft 2020-12 JSON Schema 写入新文件，便于编辑器提示、收据结构检查和上游预检，它不接收或验证实例文件。
+本页描述 ContactReceipt `0.1.1` 的公开接口。运行时解析器是 trace、policy 与 evidence 的最终约束；`schema` 子命令只把 Draft 2020-12 JSON Schema 写入新文件，便于编辑器提示、收据结构检查和上游预检，它不接收或验证实例文件。
 
 ## CLI
 

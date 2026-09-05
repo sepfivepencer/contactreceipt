@@ -1,6 +1,6 @@
 # How to 将 ROS 2 bag 或 MCAP 记录接入 ContactReceipt
 
-本指南说明如何把团队已有的记录导出为 ContactReceipt 中立 JSON。`0.1.0` 不直接解析 bag 或 MCAP；导出器属于你的仿真/机器人适配层。
+本指南说明如何把团队已有的记录导出为 ContactReceipt 中立 JSON。`0.1.1` 不直接解析 bag 或 MCAP；导出器属于你的仿真/机器人适配层。
 
 ## 前置条件
 

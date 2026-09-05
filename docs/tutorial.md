@@ -24,7 +24,7 @@ python -m pip install .
 contactreceipt --version
 ```
 
-输出应为 `contactreceipt 0.1.0`。
+输出应为 `contactreceipt 0.1.1`。
 
 ## 第 2 步：签发一张通过收据
 

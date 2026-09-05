@@ -19,7 +19,7 @@ from contactreceipt.model import (
     trace_as_dict,
 )
 
-TOOL_VERSION = "0.1.0"
+TOOL_VERSION = "0.1.1"
 ALGORITHM = "civil-assembly-v1"
 MAX_VIOLATIONS = 1_000
 
